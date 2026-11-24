@@ -272,12 +272,13 @@ body > footer {
 
   /* Mobile navigation */
   @media (max-width: 767px) {
+    header.menu-ready .menu-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 
-  header .menu-ready nav {
+  header.menu-ready nav {
     display: grid;
     grid-template-rows: 0fr;
     Visibility: hidden;
@@ -287,6 +288,7 @@ body > footer {
   }
 
   header.menu-ready nav ul {
+    flex-direction: column;
     min-height: 0;
     overflow: hidden;
     margin: 0;
@@ -296,7 +298,7 @@ body > footer {
 
   header.menu-ready nav.is-open {
     grid-template-rows: 1fr;
-    visibilty: visible;
+    visibility: visible;
   }
 }
 
@@ -322,7 +324,7 @@ body > footer {
     font-size: 3rem;
   }
 
-  sections:has(> article) {
+  section:has(> article) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
