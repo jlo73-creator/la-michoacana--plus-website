@@ -7,3 +7,6 @@ The goal is to make it easy for customers to browse the treats and find the exac
 
 ## Part 2 Progress
 This was actually alot more confusing to me then the other ones, but I created 4 HTML pages with navigation I think with 12 menu items, and I put a ordering link. 
+
+## Part 3 Progress
+I added responsive CSS using the planned color palate from Pinterest. I added JavaScript mobile menu that opens and closes on all four pages. I made sure to test al the layouts (Mobile, tablet, desktop).
