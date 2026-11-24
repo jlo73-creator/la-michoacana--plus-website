@@ -4,7 +4,7 @@ const navigation = header?.querySelector("nav");
 
 if (header && navigation) {
   const menuButton = document.createElement("button");
-  const mobileScreen = window.matchMedia"(max-width: 767px)";
+  const mobileScreen = window.matchMedia("(max-width: 767px)");
 
 navigation.id = "main-navigation";
 
