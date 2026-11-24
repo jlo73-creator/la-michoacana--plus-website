@@ -4,7 +4,7 @@ const navigation = header?.querySelector("nav");
 
 if (header && navigation) {
   const menuButton = document.createElement("button");
-  const mobileScreen = window.matchMedia("max-width: 767px)");
+  const mobileScreen = window.matchMedia"(max-width: 767px)";
 
 navigation.id = "main-navigation";
 
@@ -17,14 +17,14 @@ menuButton.textContent = "☰ Menu";
 header.insertBefore(menuButton, navigation);
 
 // Keep the botton, menu visibility, and accessibility state together.
-funtion setMenuOpen(isOpen) {
+function setMenuOpen(isOpen) {
   navigation.classList.toggle("is-open", isOpen);
   menuButton.setAttribute("aria-expanded", String(isOpen));
-  menuButton.tectContent = isOpen ? "X Close" : "☰ Menu";
+  menuButton.textContent = isOpen ? "X Close" : "☰ Menu";
   navigation.inert = mobileScreen.matches && !isOpen;
 }
 
-menuButton.addEventListener("Click", () => {
+menuButton.addEventListener("click", () => {
   const isOpen = menuButton.getAttribute("aria-expanded") === "true";
   setMenuOpen(!isOpen);
 });
@@ -49,6 +49,6 @@ mobileScreen.addEventListener("change", () => {
   setMenuOpen(false);
 });
 
-header.classlist.add("menu-ready);
+header.classList.add("menu-ready");
 setMenuOpen(false);
 }
