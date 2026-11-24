@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
+/* Colors and shared spacing */ :root {
+  --pink: #c2185b;
+  --lime: #a3e635;
+  --mango: #ffca3a;
+  --cream: #fff8ee;
+  --plum: #2e1830;
+  --white: #ffffff;
+  --border: #e7d5de;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--plum);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--pink);
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+p,
+ul {
+  margin-bottom: 16px;
+}
+
+a {
+  color: var(--pink);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+a:foucs-visible,
+button:focus-visible {
+  outline: 3px solid var(--plum);
+  outline-offset: 4px;
+}
+
+/* Header and main navigation */
+body > header {
+  padding:24px;
+  background: var(--pink);
+  color: var(--white);
+  border-bottom: 8px solid var(--mango);
+}
+
+body > header > p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+header nav a {
+  display: block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+  background: var(--mango);
+  color: var(--plum);
+}
+
+header a:focus-visible,
+header button:focus-visible {
+  outline-color: var(--white);
+}
+
+/* JavaScript enables the mobile menu */
+.menu-toggle {
+  display: none;
+  min-width: 48px;
+  min-height: 48px;
+  margin-top: 16px;
+  padding: 8px 16px;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Page content */
+main {
+  width: min(1120px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+main > section {
+  margin-bottom: 32px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--white);
+}
+
+main > nav {
+  margin-bottom: 32px;
+}
+
+main > nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+main > nav a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--plum);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Photos */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px 0;
+  border-radius: 16px;
+}
+
+section > img {
+  width: min(100%, 420px);
+}
+
+article img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Homepage welcome area */
+section[aria-labelledby="welcome-heading"] {
+  background: var(--mango);
+  border-color: var(--mango);
+}
+
+section[aria-labelledby="welcome-heading"] h1 {
+  color: var(--plum);
+}
+
+/* Menu and featured item cards */
+section:has(> article) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+section:has(> article) > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+article {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-top: 6px solid var(--lime);
+  border-radius: 16px;
+  background: var(--cream);
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links styled as action buttons */
+main a[href="menu.html"],
+main a[href="contact.html"],
+main a[href*="order.online"],
+main a[href*="/maps/dir/"] {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid var(--pink);
+  border-radius: 999px;
+  background: var(--pink);
+  color: var{--white);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transitions: background-color 0.2s, color 0.2s;
+            }
+  main a[href="contact.html"] {
+    background: transparent;
+    color: var(--pink);
+  }
+
+main a[href="menu.html"]:hover,
+main a[href="contact.html"]:hover,
+main a[href*="order.online"]:hover,
+main a[href*="/maps/dir/"]:hover {
+  background: var(--plum);
+  border-color: var(--plum);
+  color: var(--white);
+}
+
+/* Contact details and map */
+address {
+  font-style: normal;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 16px;
+}
+
+/* Footer */
+body > footer {
+  padding: 24px;
+  background: var(--plum);
+  color: var{--cream);
+  text-align: center;
+  }
+
+  footer p {
+    margin: 8px 0;
+  }
+
+  /* Mobile navigation */
+  @media (max-width: 767px) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .menu-ready nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    Visibility: hidden;
+    transition:
+      grid-template-rows 0.25s ease,
+      visibility 0.25s;
+  }
+
+  header.menu-ready nav ul {
+    min-height: 0;
+    overflow: hidden;
+    margin: 0;
+    flex-wrap: nowrap;
+    gap:0;
+  }
+
+  header.menu-ready nav.is-open {
+    grid-template-rows: 1fr;
+    visibilty: visible;
+  }
+}
+
+/* Tablet Layout */
+@media (min-width: 768px) {
+  body > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px max(24px, calc((100% - 1120px) / 2));
+  }
+
+  header nav ul {
+    margin: 0;
+  }
+
+  main > section {
+    padding: 32px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  sections:has(> article) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  section[aria-labelledby="welcome-heading"] {
+    display: flow-root;
+  }
+
+  section[aria-labelledby="welcome-heading"] > img {
+    float: right;
+    width: 40%;
+    margin: 0 0 24px 32px;
+  }
+}
+  /* Desktop Layout */
+@media (min-width: 1025px) {
+  section:has(> article) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+  /* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
